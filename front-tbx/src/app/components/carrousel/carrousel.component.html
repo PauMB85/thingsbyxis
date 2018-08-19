@@ -1,0 +1,36 @@
+<ngx-hm-carousel
+  [(ngModel)]="index"
+  (ngModelChange)="indexChanged($event)"
+  [autoplay-speed]="3000"
+  [autoplay]="true"
+  [infinite]="infinite"
+  [between-delay]="5000"
+  class="carousel c-accent">
+
+  <section ngx-hm-carousel-container class="content">
+    <article class="item cursor-pointer"
+             *ngFor="let avatar of avatars"
+             ngx-hm-carousel-item>
+      <div class="img"
+           [style.backgroundImage]="'url('+avatar.url+')'">
+      </div>
+    </article>
+  </section>
+
+  <ng-template #carouselPrev>
+    <div class="click-area">
+      <i class="material-icons">keyboard_arrow_left</i>
+    </div>
+  </ng-template>
+  <ng-template #carouselNext>
+    <div class="click-area">
+      <i class="material-icons">keyboard_arrow_right</i>
+    </div>
+  </ng-template>
+
+  <ng-template #carouselDot let-model>
+    <div class="ball bg-accent"
+         [class.visible]="model.index === model.currentIndex"></div>
+  </ng-template>
+
+</ngx-hm-carousel>
