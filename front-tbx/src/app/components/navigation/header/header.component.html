@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
-  <div><a routerLink="/">LOGO</a></div>
-  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-    <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+  <div fxFlex="20"><a routerLink="/">LOGO</a></div>
+  <div fxFlex="60" fxLayout="row" fxLayoutAlign="space-around center" fxHide.xs>
+    <ul fxLayout fxLayoutGap="30%" class="navigation-items">
       <li><a routerLink="/collares">Collares</a></li>
       <li><a routerLink="/abrigos">Abrigos</a>
     </ul>
@@ -9,6 +9,9 @@
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
     <button routerLink="/shopping" mat-icon-button>
       <mat-icon>shopping_cart</mat-icon>
+    </button>
+    <button routerLink="/account" mat-icon-button>
+      <mat-icon>account_circle</mat-icon>
     </button>
   </div>
   <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" fxHide.gt-xs>
@@ -32,5 +35,12 @@
     <button routerLink="/shopping" mat-icon-button>
       <mat-icon>shopping_cart</mat-icon>
     </button>
+    <button routerLink="/account" mat-icon-button>
+      <mat-icon>account_circle</mat-icon>
+    </button>
   </div>
 </mat-toolbar>
+
+
+
+
