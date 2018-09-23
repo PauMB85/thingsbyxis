@@ -8,7 +8,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import 'hammerjs';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import {NgxHmCarouselModule} from "ngx-hm-carousel";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HeaderComponent } from './components/navigation/header/header.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { CollaresComponent } from './components/collares/collares.component';
@@ -16,6 +16,10 @@ import { AbrigosComponent } from './components/abrigos/abrigos.component';
 import {AppRoutingModule} from "./routing/routing.module";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { ShoppingComponent } from './components/shopping/shopping.component';
+import { FooterComponent } from './components/navigation/footer/footer.component';
+import { LoginComponent } from './components/account/login/login.component';
+import { SignupComponent } from './components/account/signup/signup.component';
+import { AccountComponent } from './components/account/account.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { ShoppingComponent } from './components/shopping/shopping.component';
     WelcomeComponent,
     CollaresComponent,
     AbrigosComponent,
-    ShoppingComponent
+    ShoppingComponent,
+    FooterComponent,
+    LoginComponent,
+    SignupComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +42,8 @@ import { ShoppingComponent } from './components/shopping/shopping.component';
     AppRoutingModule,
     MaterialModule,
     FlexLayoutModule,
-    NgxHmCarouselModule
+    NgxHmCarouselModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
