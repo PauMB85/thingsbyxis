@@ -1,0 +1,84 @@
+<footer>
+  <mat-sidenav-container>
+    <mat-sidenav-content fxLayout fxLayoutAlign="start start" fxHide.xs>
+      <mat-list fxLayout="column" fxFlex="20" fxFlexOffset="4" fxLayoutAlign="center">
+        <h3 matSubheader> Información </h3>
+        <mat-list-item> Cómo obtener medidas de tu mascota? </mat-list-item>
+        <mat-list-item> FAQ </mat-list-item>
+      </mat-list>
+      <mat-toolbar fxLayout fxFlex="50" fxLayoutAlign="center center">
+        <mat-nav-list fxLayout="row" >
+          <a mat-list-item fxLayout href="https://www.facebook.com/Thingsbyxis/" target="_blank" >
+            <img src="assets/icons/social-network/F-Logo/Black/PNG/flogo-RGB-HEX-Blk-58.png" alt="facebook">
+          </a>
+          <a mat-list-item fxLayout href="https://www.instagram.com/thingsbyxis/?hl=es" target="_blank" >
+            <img src="assets/icons/social-network/I-Logo/glyph-logo_May2016.png" alt="instagram">
+          </a>
+          <a mat-list-item fxLayout href="#">
+            <img src="assets/icons/social-network/P-Logo/CMYK/black.png" alt="instagram">
+          </a>
+        </mat-nav-list>
+      </mat-toolbar>
+
+      <form  [formGroup]="emailFormControl"
+             fxLayout="row"
+             fxFlex
+             fxLayoutAlign="center center"
+             fxLayoutGap="5%"
+             (ngSubmit)="onSubmit()">
+        <mat-form-field >
+          <mat-label>Suscríbete</mat-label>
+          <input
+            type="email"
+            matInput
+            placeholder="mi-correo@mail.com"
+            formControlName="email">
+          <mat-error>Invalid email.</mat-error>
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="primary" [disabled]="emailFormControl.invalid">Submit</button>
+      </form>
+    </mat-sidenav-content>
+
+    <mat-sidenav-content fxLayout="column" fxHide.gt-xs>
+      <mat-toolbar fxLayoutAlign="center center">
+        <mat-nav-list fxLayout="row" fxLayoutAlign="center center">
+          <a mat-list-item fxLayout href="https://www.facebook.com/Thingsbyxis/" target="_blank" >
+            <img src="assets/icons/social-network/F-Logo/Black/PNG/flogo-RGB-HEX-Blk-58.png" alt="facebook">
+          </a>
+          <a mat-list-item fxLayout href="https://www.instagram.com/thingsbyxis/?hl=es" target="_blank" >
+            <img src="assets/icons/social-network/I-Logo/glyph-logo_May2016.png" alt="instagram">
+          </a>
+          <a mat-list-item fxLayout href="#">
+            <img src="assets/icons/social-network/P-Logo/CMYK/black.png" alt="instagram">
+          </a>
+        </mat-nav-list>
+      </mat-toolbar>
+      <mat-divider></mat-divider>
+      <form  [formGroup]="emailFormControl"
+             fxLayout
+             fxLayoutAlign="space-around center"
+             fxLayoutGap="5%"
+             (ngSubmit)="onSubmit()">
+        <mat-form-field >
+          <mat-label>Suscríbete</mat-label>
+          <input
+            type="email"
+            matInput
+            placeholder="mi-correo@mail.com"
+            formControlName="email">
+          <mat-error>Invalid email.</mat-error>
+
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="primary" [disabled]="emailFormControl.invalid">Submit</button>
+      </form>
+      <mat-divider></mat-divider>
+      <mat-list fxLayout="column" fxLayoutAlign="start">
+        <h3 matSubheader>Información</h3>
+        <mat-list-item> Cómo obtener medidas de tu mascota? </mat-list-item>
+        <mat-list-item> FAQ </mat-list-item>
+      </mat-list>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</footer>
+

@@ -1,0 +1,14 @@
+footer {
+  margin-top: 40px;
+  padding: 20px 20px 30px 20px;
+  background: whitesmoke;
+}
+
+mat-sidenav-content {
+  background: whitesmoke;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+}
