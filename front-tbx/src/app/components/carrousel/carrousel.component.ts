@@ -14,11 +14,11 @@ export class CarrouselComponent implements OnInit {
   direction = 'right';
   directionToggle = true;
   autoplay = true;
-  avatars = '1234567890'.split('').map((x, i) => {
-    const num = i;
+  avatars = '1234'.split('').map((x, i) => {
+    const num = i+1;
     // const num = Math.floor(Math.random() * 1000);
     return {
-      url: `https://picsum.photos/600/400/?${num}`,
+      url: `assets/collares/collar-${num}.jpg`,
       title: `${num}`
     };
   });
@@ -26,10 +26,21 @@ export class CarrouselComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    //this.addImg();
+  }
+
+  private addImg() {
+
+    for(let i = 1; i < 3; i++) {
+      //this.avatars.push({ulr:'assets/collares/collar-'+i+'.jpg',title:'collar-'+i});
+      //this.avatars.push({ulr:'assets/abrigos/abrigo-'+i+'.jpg',title:'abrigo-'+i});
+    }
+
+    console.log('avatars',this.avatars);
   }
 
   indexChanged(index) {
-    console.log(index);
+    //console.log(index);
   }
 
 }
